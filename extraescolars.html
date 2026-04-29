@@ -7,57 +7,6 @@
 <meta name="description" content="Quadre horari i informació d'inscripció a les extraescolars de l'AFA Escola La Draga.">
 <link rel="icon" href="assets/logo-afa.jpg">
 <link rel="stylesheet" href="assets/styles.css">
-<style>
-  /* Section grouping inside the timetable */
-  .timetable .group-row td {
-    background: var(--blue-darker);
-    color: #fff;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    padding: 10px 16px;
-  }
-  .timetable .activity {
-    display: flex; flex-direction: column; gap: 2px;
-    line-height: 1.3;
-  }
-  .timetable .activity .name { font-weight: 700; color: var(--blue-darker); font-size: 0.95rem; }
-  .timetable .activity .levels { font-size: 0.78rem; color: var(--ink); }
-  .timetable .activity .provider { font-size: 0.75rem; color: var(--ink-soft); font-style: italic; }
-  .timetable .activity .new-badge {
-    display: inline-block; align-self: flex-start;
-    background: var(--accent-soft); color: var(--blue-darker);
-    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em;
-    padding: 2px 6px; border-radius: 4px;
-    margin-bottom: 2px;
-  }
-
-  .timetable .activity .name-link {
-    color: var(--blue-darker);
-    text-decoration: none;
-    border-bottom: 1px dotted var(--blue);
-    transition: background 0.15s, color 0.15s;
-    padding-bottom: 1px;
-  }
-  .timetable .activity .name-link:hover,
-  .timetable .activity .name-link:focus {
-    color: var(--blue);
-    background: var(--accent-soft);
-    border-bottom-color: var(--blue);
-  }
-  /* Highlight target card briefly when scrolled to */
-  .activity-card { scroll-margin-top: 90px; transition: box-shadow 0.3s; }
-  .activity-card:target {
-    box-shadow: 0 0 0 3px var(--accent), 0 6px 22px rgba(0,0,0,0.08);
-  }
-
-  .timetable td.acollida {
-    background: var(--blue-lighter);
-    font-style: italic;
-    color: var(--blue-darker);
-  }
-</style>
 </head>
 <body data-cards="shadow">
 <a href="#main" class="skip">Salta al contingut</a>
@@ -340,29 +289,6 @@
   </section>
 
   <!-- ===== INFO PER ACTIVITAT ===== -->
-  <style>
-    .activity-card { display:flex; flex-direction:column; gap:10px; }
-    .activity-card .header-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-    .activity-card h3 { margin:0; }
-    .activity-card .meta { display:flex; flex-wrap:wrap; gap:14px; font-size:0.85rem; color:var(--ink-soft); }
-    .activity-card .meta span strong { color:var(--blue-darker); font-weight:600; }
-    .activity-card .description { font-size:0.95rem; line-height:1.55; }
-    .activity-card .provider-block {
-      margin-top:auto; padding-top:14px; border-top:1px solid rgba(0,0,0,0.08);
-      font-size:0.85rem; line-height:1.5;
-    }
-    .activity-card .provider-block strong { color:var(--blue-darker); }
-    .activity-card .new-tag {
-      display:inline-block; background:var(--accent-soft); color:var(--blue-darker);
-      font-size:0.7rem; font-weight:700; letter-spacing:0.08em;
-      padding:3px 8px; border-radius:4px; text-transform:uppercase;
-    }
-    .objective-text { font-style: italic; color: var(--blue-darker); border-left: 3px solid var(--accent); padding-left:12px; margin: 8px 0; font-size:0.9rem; }
-    .contact-link { display:inline-flex; align-items:center; gap:5px; color:var(--blue-darker); font-weight:500; text-decoration:none; }
-    .contact-link:hover { color:var(--blue); }
-    .contact-link svg { flex-shrink:0; }
-  </style>
-
   <section class="block" style="background: var(--blue-lighter);">
     <div class="wrap">
       <span class="eyebrow">Activitats · Curs 2025–2026</span>
