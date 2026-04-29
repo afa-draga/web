@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<title>Comissions · AFA Escola La Draga</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Les comissions de l'AFA de l'Escola La Draga: què fa cadascuna i com participar-hi.">
+<link rel="icon" href="assets/logo-afa.jpg">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  /* Index al principi */
+  .commission-index {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .commission-index a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    color: var(--blue-darker);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.15s, border-color 0.15s, transform 0.15s;
+  }
+  .commission-index a:hover,
+  .commission-index a:focus {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .commission-index a .num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  /* Cards de comissió */
+  .commission-card {
+    scroll-margin-top: 90px;
+    transition: box-shadow 0.3s;
+  }
+  .commission-card:target {
+    box-shadow: 0 0 0 3px var(--accent), 0 6px 22px rgba(0,0,0,0.08);
+  }
+  .commission-card .header-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .commission-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--blue-darker);
+  }
+  .commission-card ul {
+    padding-left: 1.2em;
+    margin: 12px 0 0;
+  }
+  .commission-card ul li {
+    margin-bottom: 0.4em;
+  }
+
+  /* CTA final */
+  .cta-final {
+    background: var(--blue-darker);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: clamp(36px, 6vw, 64px) clamp(24px, 5vw, 56px);
+    text-align: center;
+    margin-top: 40px;
+  }
+  .cta-final h2 {
+    color: #fff;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    margin: 0 0 16px;
+  }
+  .cta-final p {
+    color: rgba(255,255,255,0.85);
+    max-width: 60ch;
+    margin: 0 auto 28px;
+    font-size: 1.05rem;
+  }
+  .cta-final .accent-word {
+    background: var(--accent-soft);
+    color: var(--blue-darker);
+    padding: 0 8px;
+    border-radius: 6px;
+  }
+</style>
+</head>
+<body data-cards="shadow">
+<a href="#main" class="skip">Salta al contingut</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="AFA Escola La Draga, inici">
+      <img src="assets/logo-afa.jpg" alt="" width="120" height="83">
+      <span class="brand-text"><strong>AFA</strong><span>Escola La Draga</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="afa.html">L'AFA</a></li>
+        <li><a href="comissions.html" aria-current="page">Comissions</a></li>
+        <li><a href="extraescolars.html">Extraescolars</a></li>
+        <li><a href="menjador.html">Menjador</a></li>
+        <li><a href="https://agora.xtec.cat/ceipladraga/" rel="external noopener" target="_blank">Escola ↗</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" data-screen-label="04 Comissions">
+
+  <section class="page-header">
+    <div class="wrap">
+      <p class="breadcrumbs"><a href="index.html">Inici</a> · Comissions</p>
+      <h1>Comissions</h1>
+      <p>Les comissions són grups de famílies voluntàries que treballen en àmbits concrets de la vida de l'escola. Cada comissió s'encarrega d'organitzar les seves activitats i de fer propostes a la junta de l'AFA.</p>
+    </div>
+  </section>
+
+  <!-- ÍNDEX -->
+  <section class="block">
+    <div class="wrap">
+      <span class="eyebrow">Índex</span>
+      <h2>Les nostres comissions</h2>
+      <p class="muted">Tria la que més t'interessi per veure què fa.</p>
+
+      <nav class="commission-index" aria-label="Índex de comissions">
+        <a href="#menjador">Menjador</a>
+        <a href="#extraescolars">Extraescolars</a>
+        <a href="#festes">Festes</a>
+        <a href="#carnaval">Carnaval</a>
+        <a href="#comunicacio">Comunicació</a>
+        <a href="#eduquem">Eduquem en família</a>
+        <a href="#coeducacio">Coeducació i diversitat</a>
+        <a href="#pati">Pati</a>
+        <a href="#esportiva">Esportiva</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- COMISSIONS -->
+  <section class="block" style="background: var(--blue-lighter);">
+    <div class="wrap">
+      <span class="eyebrow">Què fa cada comissió</span>
+      <h2>Detall per àmbit</h2>
+
+      <div class="info-grid" style="grid-template-columns: 1fr; gap: 24px; margin-top: 28px;">
+
+        <!-- 1. MENJADOR -->
+        <article class="info-block commission-card" id="menjador">
+          <div class="header-row">
+            <span class="tag">Comissió</span>
+            <h3>Menjador</h3>
+          </div>
+          <p>Vetllem perquè l'estona del migdia sigui un espai de qualitat, saludable i educatiu. Fem de pont entre les famílies, l'empresa de càtering (Fundació Pere Tarrés) i l'escola.</p>
+          <ul>
+            <li>Revisem els <strong>menús</strong> i proposem millores nutricionals.</li>
+            <li>Recollim <strong>incidències i suggeriments</strong> de les famílies.</li>
+            <li>Donem suport al <strong>coordinador del menjador</strong>.</li>
+            <li>Treballem perquè el menjador sigui <strong>educatiu</strong>: hàbits, autonomia i convivència.</li>
+            <li>Vetllem per la <strong>diversitat</strong> de dietes (al·lèrgies, intoleràncies, motius culturals).</li>
+          </ul>
+          <p style="margin-top:18px;"><a class="btn btn-ghost" href="menjador.html">Veure menús i normativa →</a></p>
+        </article>
+
+        <!-- 2. EXTRAESCOLARS -->
+        <article class="info-block commission-card" id="extraescolars">
+          <div class="header-row">
+            <span class="tag">Comissió</span>
+            <h3>Extraescolars</h3>
+          </div>
+          <p>Coordinem les activitats fora de l'horari lectiu i el servei d'acollida del matí. Treballem amb les empreses proveïdores per oferir una proposta diversa, de qualitat i a un preu ajustat.</p>
+          <ul>
+            <li>Definim el <strong>catàleg d'activitats</strong> de cada curs i el quadre horari.</li>
+            <li>Negociem amb les <strong>empreses proveïdores</strong> i en fem el seguiment.</li>
+            <li>Recollim <strong>propostes</strong> de noves activitats que ens fan arribar les famílies.</li>
+            <li>Coordinem el <strong>servei d'acollida</strong> matinal i altres serveis complementaris.</li>
+            <li>Vetllem per l'<strong>equilibri</strong> entre activitats esportives, artístiques i educatives.</li>
+          </ul>
+          <p style="margin-top:18px;"><a class="btn btn-ghost" href="extraescolars.html">Veure totes les extraescolars →</a></p>
+        </article>
+
+        <!-- 3. FESTES -->
+        <article class="info-block commission-card" id="festes">
+          <div class="header-row">
+            <span class="tag">Comissió</span>
+            <h3>Festes</h3>
+          </div>
+          <p>Organitzem les grans celebracions del curs, moments clau per fer comunitat i compartir l'escola amb les famílies. La festa de fi de curs és la més emblemàtica.</p>
+          <ul>
+            <li>Organitzem la <strong>Castanyada</strong>, la <strong>festa de Sant Jordi</strong> i la <strong>festa de fi de curs</strong>.</li>
+            <li>Coordinem la <strong>venda de roses i ponsèties</strong> que fan els alumnes de 6è.</li>
+            <li>Pensem activitats per a totes les edats: tallers, jocs, música, berenar compartit…</li>
+            <li>Busquem <strong>col·laboradors</strong> i gestionem el material i la logística de cada festa.</li>
+          </ul>
+        </article>
+
+        <!-- 4. CARNAVAL -->
+        <article class="info-block commission-card" id="carnaval">
+          <div class="header-row">
+            <span class="tag">Comissió</span>
+            <h3>Carnaval</h3>
+          </div>
+          <p>Una de les festes més estimades de l'escola. Cada any triem un tema i ens hi llencem amb disfresses, músiques i decoració.</p>
+          <ul>
+            <li>Triem la <strong>temàtica</strong> del carnaval de cada curs amb tota la comunitat.</li>
+            <li>Coordinem la <strong>rua</strong> per Banyoles i la festa al pati de l'escola.</li>
+            <li>Acompanyem les famílies en la <strong>preparació de les disfresses</strong> de grup.</li>
+            <li>Treballem en xarxa amb la comissió de Festes per a la logística i la decoració.</li>
+          </ul>
+        </article>
+
+        <!-- 5. COMUNICACIÓ -->
+        <article class="info-block commission-card" id="comunicacio">
+          <div class="header-row">
+            <span class="tag">Comissió</span>
+            <h3>Comunicació</h3>
+          </div>
+          <p>Cuidem que la informació arribi a totes les famílies. Mantenim viva la veu de l'AFA dins i fora de l'escola.</p>
+          <ul>
+            <li>Mantenim aquesta <strong>web</strong> i el <strong>butlletí</strong> periòdic per correu.</li>
+            <li>Gestionem la <strong>comunitat de WhatsApp</strong> i altres canals d'avís a les famílies.</li>
+            <li>Dissenyem els <strong>cartells</strong> i materials de difusió de les activitats.</li>
+            <li>Preparem comunicats sobre <strong>serveis, comissions i convocatòries</strong>.</li>
+            <li>Recollim les notícies de les altres comissions per fer-les arribar a tothom.</li>
+          </ul>
+        </article>
+
+        <!-- 6. EDUQUEM EN FAMÍLIA -->
+        <article class="info-block commission-card" id="eduquem">
+          <div class="header-row">
+            <span class="tag">Comissió</span>
+            <h3>Eduquem en família</h3>
+          </div>
+          <p>Programa de xerrades, tallers i recursos per a mares, pares i cuidadors. Un espai per pensar i compartir l'educació dels nostres infants.</p>
+          <ul>
+            <li>Programem <strong>xerrades</strong> amb professionals de l'educació, la salut i la criança.</li>
+            <li>Organitzem <strong>tallers pràctics</strong> sobre temes que interessen a les famílies.</li>
+            <li>Compartim <strong>recursos i lectures</strong> recomanades.</li>
+            <li>Recollim les <strong>inquietuds i propostes</strong> de temes a tractar.</li>
+            <li>Coordinem el calendari amb altres entitats del poble per evitar solapaments.</li>
+          </ul>
+          <p><a class="btn btn-ghost" href="https://educacio.banyoles.cat/ca/eduquem-en-familia.html" rel="external noopener" target="_blank">Web del programa Eduquem en família ↗</a></p>
+        </article>
+
+        <!-- 7. COEDUCACIÓ I DIVERSITAT -->
+        <article class="info-block commission-card" id="coeducacio">
+          <div class="header-row">
+            <span class="tag">Comissió</span>
+            <h3>Coeducació i diversitat</h3>
+          </div>
+          <p>Treballem per una escola més inclusiva, que reculli totes les realitats familiars i tracti la diversitat com una riquesa.</p>
+          <ul>
+            <li>Promovem una <strong>mirada coeducativa</strong> en totes les activitats de l'AFA.</li>
+            <li>Donem suport a iniciatives d'<strong>inclusió</strong> a l'escola.</li>
+            <li>Visibilitzem la <strong>diversitat familiar, cultural i funcional</strong> de la nostra comunitat.</li>
+            <li>Proposem <strong>llenguatge i materials</strong> respectuosos en les comunicacions.</li>
+            <li>Col·laborem amb el claustre en projectes transversals.</li>
+          </ul>
+        </article>
+
+        <!-- 8. PATI -->
+        <article class="info-block commission-card" id="pati">
+          <div class="header-row">
+            <span class="tag">Comissió</span>
+            <h3>Pati</h3>
+          </div>
+          <p>El pati és un espai d'aprenentatge i convivència. La comissió treballa amb l'escola per fer-lo més divers, accessible i ric en propostes.</p>
+          <ul>
+            <li>Pensem el <strong>pati com a espai educatiu</strong>: zones de joc, calma, natura.</li>
+            <li>Proposem <strong>millores</strong> i col·laborem en obres i pintades del pati.</li>
+            <li>Cerquem <strong>recursos</strong> (subvencions, materials donats) per renovar-lo.</li>
+            <li>Organitzem <strong>jornades de treball</strong> obertes a les famílies.</li>
+          </ul>
+        </article>
+
+        <!-- 9. ESPORTIVA -->
+        <article class="info-block commission-card" id="esportiva">
+          <div class="header-row">
+            <span class="tag">Comissió</span>
+            <h3>Esportiva</h3>
+          </div>
+          <p>Promovem l'esport en família i el suport als alumnes que practiquen activitats esportives federades.</p>
+          <ul>
+            <li>Organitzem <strong>caminades i sortides familiars</strong> al voltant de Banyoles.</li>
+            <li>Coordinem la participació en <strong>jornades esportives</strong> intercentres.</li>
+            <li>Col·laborem amb les <strong>entitats esportives</strong> del poble.</li>
+            <li>Promovem hàbits saludables i el joc lliure entre les famílies.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CRIDA FINAL -->
+  <section class="block">
+    <div class="wrap">
+      <div class="cta-final">
+        <span class="eyebrow" style="color: var(--accent);">Suma't-hi</span>
+        <h2>Apunta't a la comissió que més t'agradi!</h2>
+        <p>Cada comissió és <span class="accent-word">oberta</span> a totes les famílies. No cal cap experiència prèvia: només ganes de participar en allò que més et motivi. Cada hora que hi dediques fa més rica l'escola dels teus fills i filles.</p>
+        <p style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+          <a class="btn btn-primary" href="mailto:ampa@ceipladraga.cat?subject=Vull%20apuntar-me%20a%20una%20comissi%C3%B3" style="background: var(--accent); color: var(--blue-darker);">Vull apuntar-m'hi</a>
+          <a class="btn btn-ghost" href="contacte.html" style="color:#fff; border-color:rgba(255,255,255,0.4);">Saber-ne més</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="color:#fff;">
+          <img src="assets/logo-afa.jpg" alt="" width="100" height="69" style="background:#fff; padding:6px; border-radius:8px;">
+          <span class="brand-text"><strong style="color:#fff;">AFA</strong><span style="color:#9eb3cc;">Escola La Draga · Banyoles</span></span>
+        </a>
+        <p style="margin-top:18px; color:#9eb3cc; max-width: 36ch;">Associació de Famílies d'Alumnes. Fem comunitat al voltant de l'escola.</p>
+      </div>
+      <div>
+        <h4>Enllaços</h4>
+        <ul>
+          <li><a href="afa.html">L'AFA</a></li>
+          <li><a href="comissions.html">Comissions</a></li>
+          <li><a href="extraescolars.html">Extraescolars</a></li>
+          <li><a href="menjador.html">Menjador</a></li>
+          <li><a href="contacte.html">Contacte</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacte</h4>
+        <ul>
+          <li><a href="mailto:ampa@ceipladraga.cat">ampa@ceipladraga.cat</a></li>
+          <li><a href="https://chat.whatsapp.com/JeJYB9HPouA163zASYSJlp" rel="external noopener" target="_blank">Comunitat WhatsApp ↗</a></li>
+          <li><a href="https://agora.xtec.cat/ceipladraga/" rel="external noopener" target="_blank">Web de l'escola ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© AFA Escola La Draga · Banyoles</span>
+      <span>Web feta amb estima per les famílies</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

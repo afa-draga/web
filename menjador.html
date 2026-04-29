@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<title>Menjador · AFA Escola La Draga</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Servei de menjador de l'Escola La Draga gestionat per la Fundació Pere Tarrés: menús, preus, normativa, inscripcions i contacte.">
+<link rel="icon" href="assets/logo-afa.jpg">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+  }
+  .price-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 26px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--blue);
+  }
+  .price-card .price {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--blue-darker);
+    line-height: 1;
+    margin: 12px 0 6px;
+  }
+  .price-card .price small {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .price-card .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+  .torns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+  }
+  .torn-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    border-left: 4px solid var(--accent);
+  }
+  .torn-card .torn-num {
+    display: inline-block;
+    background: var(--blue-darker);
+    color: #fff;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+  .torn-card .torn-time {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--blue-darker);
+    margin: 10px 0 4px;
+  }
+  .info-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+  }
+  .info-icon-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .info-icon-card h3 { margin: 0; color: var(--blue-darker); }
+  .alert-info {
+    background: #fff7d6;
+    border-left: 4px solid #d4a017;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 0.95rem;
+  }
+  .alert-info strong { color: #7a5800; }
+</style>
+</head>
+<body data-cards="shadow">
+<a href="#main" class="skip">Salta al contingut</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="AFA Escola La Draga, inici">
+      <img src="assets/logo-afa.jpg" alt="" width="120" height="83">
+      <span class="brand-text"><strong>AFA</strong><span>Escola La Draga</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="afa.html">L'AFA</a></li>
+        <li><a href="comissions.html">Comissions</a></li>
+        <li><a href="extraescolars.html">Extraescolars</a></li>
+        <li><a href="menjador.html" aria-current="page">Menjador</a></li>
+        <li><a href="https://agora.xtec.cat/ceipladraga/" rel="external noopener" target="_blank">Escola ↗</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" data-screen-label="07 Menjador">
+
+  <section class="page-header">
+    <div class="wrap">
+      <p class="breadcrumbs"><a href="index.html">Inici</a> · Menjador</p>
+      <h1>Menjador escolar</h1>
+      <p>L'Escola disposa de <strong>cuina i menjador propis</strong>, gestionats per l'AFA a través de la <strong>comissió de menjador</strong>, sota l'empara del Consell Comarcal. L'empresa contractista és la <strong>Fundació Pere Tarrés</strong> (monitoratge i cuina), amb <strong>Ametller Origen</strong> com a proveïdor d'aliments.</p>
+    </div>
+  </section>
+
+  <!-- BENVINGUDA -->
+  <section class="block">
+    <div class="wrap two-col even">
+      <div class="prose">
+        <span class="eyebrow">Curs 2025–2026</span>
+        <h2>Un servei de confiança</h2>
+        <p>Dins la gestió del menjador ens ocupem del control i supervisió de les empreses contractistes, els menús, les incidències, les millores que anem implementant dia a dia, i la gestió i manteniment de la cuina.</p>
+        <p>Es vetlla perquè la <strong>qualitat del servei sigui la més òptima possible</strong> amb un preu ajustat per a les famílies. Els equips de Cuina i Monitors posen tot el seu esforç i compromís per oferir un <strong>servei d'alimentació sa</strong> on es fomenten hàbits saludables i de conducta.</p>
+      </div>
+      <div>
+        <div class="info-block">
+          <h3>Coordinador del servei</h3>
+          <p class="big" style="margin: 6px 0 4px;">Ignasi</p>
+          <p style="margin-top:14px;"><strong>Presencialment</strong><br>Cada dia de <strong>9:00 a 10:00 h</strong> al menjador de l'Escola</p>
+          <p><strong>Per telèfon</strong><br><a href="tel:+34689641667" style="font-size:1.2rem; font-weight:600;">689 641 667</a></p>
+          <p style="margin-top:18px; font-size:0.9rem; color:var(--ink-soft);">Per dietes, al·lèrgies, medicaments, entrades i sortides, rebuts, canvis de dies o dies esporàdics, consulteu directament amb el coordinador.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENÚS DEL MES -->
+  <section class="block" style="background: var(--accent-soft);">
+    <div class="wrap">
+      <span class="eyebrow">Menús del mes</span>
+      <h2>Què mengem aquest mes?</h2>
+      <p class="muted">Cada mes publiquem el menú en PDF. Tots els menús són revisats per una nutricionista.</p>
+
+      <div class="card-grid" style="margin-top: 28px;">
+        <a class="card" href="fitxers/menjador/20260501_basal.pdf" rel="external noopener" target="_blank">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18a8 8 0 0 1-8 7h-2a8 8 0 0 1-8-7z"/><path d="M3 13c0-1 1-2 2-2h14c1 0 2 1 2 2"/><path d="M8 9l1-2M12 8V6M16 9l-1-2"/></svg>
+          </span>
+          <h3>Menú basal · Maig 2026</h3>
+          <p>Menú general per a tots els alumnes.</p>
+          <span class="arrow">PDF ↗</span>
+        </a>
+        <a class="card" href="fitxers/menjador/20260501_dietes.pdf" rel="external noopener" target="_blank">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18a8 8 0 0 1-8 7h-2a8 8 0 0 1-8-7z"/><path d="M3 13c0-1 1-2 2-2h14c1 0 2 1 2 2"/><path d="M8 9l1-2M12 8V6M16 9l-1-2"/></svg>
+          </span>
+          <h3>Dietes · Maig 2026</h3>
+          <p>Menú per a dietes especials i al·lèrgies.</p>
+          <span class="arrow">PDF ↗</span>
+        </a>
+        <a class="card" href="fitxers/menjador/20260501_sopars.pdf" rel="external noopener" target="_blank">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18a8 8 0 0 1-8 7h-2a8 8 0 0 1-8-7z"/><path d="M3 13c0-1 1-2 2-2h14c1 0 2 1 2 2"/><path d="M8 9l1-2M12 8V6M16 9l-1-2"/></svg>
+          </span>
+          <h3>Proposta de sopars · Maig 2026</h3>
+          <p>Suggeriments de sopars complementaris al menú.</p>
+          <span class="arrow">PDF ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <!-- QUÈ MENGEN ELS INFANTS -->
+  <section class="block" style="background: var(--blue-lighter);">
+    <div class="wrap">
+      <span class="eyebrow">Què mengen els nostres infants?</span>
+      <h2>Cuina catalana, productes de proximitat</h2>
+      <p>Tots els menús estan elaborats per un <strong>nutricionista professional col·legiat</strong> i supervisats pel <strong>Departament de Salut de la Generalitat</strong>, seguint les indicacions de les <strong>PReME</strong> (Programa de Revisió de Menús Escolars).</p>
+
+      <div class="info-icon-grid">
+        <div class="info-icon-card">
+          <h3>Base mediterrània</h3>
+          <p>Cuina catalana amb productes de proximitat sempre que és possible. Tots els grups d'aliments, varietat de receptes i tipus de cocció, alternant proteïnes vegetals i animals.</p>
+        </div>
+        <div class="info-icon-card">
+          <h3>Hàbits saludables</h3>
+          <p>Diferents textures, consum limitat de sal i sucre, i atenció a la diversitat (menú basal + derivacions per qüestions mèdiques o dietes especials).</p>
+        </div>
+        <div class="info-icon-card">
+          <h3>Jornades gastronòmiques</h3>
+          <p>Esporàdicament es fan jornades per conèixer altres cuines: del receptari d'altres terres catalanes o d'altres països.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:24px; font-size:0.9rem;"><a href="https://salutpublica.gencat.cat/ca/ambits/promocio/alimentacio-saludable/preme/" rel="external noopener" target="_blank">Més informació sobre les PReME ↗</a></p>
+    </div>
+  </section>
+
+  <!-- QUÈ TREBALLEM -->
+  <section class="block">
+    <div class="wrap two-col even">
+      <div class="prose">
+        <span class="eyebrow">Educació al menjador</span>
+        <h2>Què volem treballar?</h2>
+        <ul>
+          <li>Potenciar l'<strong>autonomia de l'infant</strong>, sota la supervisió d'un adult.</li>
+          <li>Adquirir <strong>hàbits d'alimentació saludable</strong>.</li>
+          <li>Lluitar contra el <strong>malbaratament alimentari</strong>.</li>
+          <li>Introduir hàbits de <strong>reciclatge i sostenibilitat</strong>.</li>
+        </ul>
+      </div>
+      <div class="prose">
+        <span class="eyebrow">Servei de monitoratge</span>
+        <h2>Què inclou?</h2>
+        <ul>
+          <li>Monitors durant l'estona de menjador.</li>
+          <li>Durant l'estona de pati de menjador:
+            <ul>
+              <li>Activitats dirigides.</li>
+              <li>Activitats dinamitzades per a grups concrets, que varien al llarg del curs.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREUS -->
+  <section class="block" style="background: var(--blue-lighter);">
+    <div class="wrap">
+      <span class="eyebrow">Preus · Curs 2025–2026</span>
+      <h2>Tarifes del servei integral</h2>
+      <p class="muted">Preu per àpat (un dia de menú).</p>
+
+      <div class="price-grid">
+        <div class="price-card">
+          <span class="label">Alumne fix</span>
+          <p class="price">7,40 € <small>/ àpat</small></p>
+          <p class="muted" style="font-size:0.9rem;">Qui fa ús del servei un o més dies a la setmana, sempre els mateixos.</p>
+        </div>
+        <div class="price-card" style="border-top-color: var(--accent);">
+          <span class="label">Alumne esporàdic</span>
+          <p class="price">7,83 € <small>/ àpat</small></p>
+          <p class="muted" style="font-size:0.9rem;">Ús puntual, o un dia que no és habitual per a un usuari fix.</p>
+        </div>
+      </div>
+
+      <p style="margin-top: 22px; font-size: 0.9rem; color: var(--ink-soft);"><strong>Facturació:</strong> a mes vençut, amb cobrament del rebut dins dels 5 primers dies del mes següent.</p>
+    </div>
+  </section>
+
+  <!-- INSCRIPCIONS -->
+  <section class="block">
+    <div class="wrap">
+      <span class="eyebrow">Apuntar-se</span>
+      <h2>Com inscriure-s'hi</h2>
+      <p class="muted">Ompliu la fitxa que correspon i envieu-la per correu electrònic.</p>
+
+      <div class="info-icon-grid">
+        <div class="info-icon-card">
+          <h3>1. Tria la fitxa</h3>
+          <p>Segons la situació de l'alumne:</p>
+          <ul>
+            <li><strong>Noves inscripcions</strong> — alumnes que no han fet ús del servei el curs anterior.</li>
+            <li><strong>Renovacions</strong> — alumnes ja inscrits el curs passat.</li>
+          </ul>
+        </div>
+
+        <div class="info-icon-card">
+          <h3>2. Omple-la</h3>
+          <p>Empleneu totes les dades demanades a la fitxa.</p>
+          <p style="font-size:0.9rem; color:var(--ink-soft);">Si no podeu omplir-la, envieu per email les mateixes dades que demanaria la fitxa.</p>
+        </div>
+
+        <div class="info-icon-card">
+          <h3>3. Envia per email</h3>
+          <p>Envieu la fitxa o les dades a:</p>
+          <p><a href="mailto:inscripcions.ladraga@gmail.com" style="font-size:1.05rem; font-weight:600;">inscripcions.ladraga@gmail.com</a></p>
+        </div>
+      </div>
+
+      <p style="margin-top:28px;">
+        <a class="btn btn-primary" href="mailto:inscripcions.ladraga@gmail.com?subject=Inscripció%20menjador%20-%20Nova">Nova inscripció</a>
+        <a class="btn btn-ghost" href="mailto:inscripcions.ladraga@gmail.com?subject=Inscripció%20menjador%20-%20Renovació" style="margin-left:8px;">Renovació</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ABSÈNCIES -->
+  <section class="block" style="background: var(--blue-lighter);">
+    <div class="wrap">
+      <span class="eyebrow">Absències</span>
+      <h2>Si l'alumne fix no fa ús del servei</h2>
+      <p>Es recomana avisar al coordinador si el vostre fill o filla no farà ús del menjador un dia habitual.</p>
+
+      <div class="alert-info">
+        <strong>Important:</strong> si comuniqueu l'absència <strong>abans de les 9:30 h del matí</strong>, no es cobrarà l'import del menú. Aviseu a temps. Gràcies!
+      </div>
+    </div>
+  </section>
+
+  <!-- TORNS -->
+  <section class="block">
+    <div class="wrap">
+      <span class="eyebrow">Funcionament</span>
+      <h2>Horari i torns</h2>
+      <p>El servei comprèn la franja horària de <strong>12:30 a 15:00 h</strong> de dilluns a divendres, o bé de <strong>13:00 a 15:30 h</strong> durant la jornada intensiva. S'organitzen dos torns a l'hora de dinar.</p>
+
+      <div class="torns-grid">
+        <div class="torn-card">
+          <span class="torn-num">1r torn</span>
+          <p class="torn-time">12:30 – 13:30</p>
+          <p><strong>Alumnes d'I3 a 2n</strong></p>
+        </div>
+        <div class="torn-card">
+          <span class="torn-num">2n torn</span>
+          <p class="torn-time">13:45 – 14:45</p>
+          <p><strong>Alumnes de 3r a 6è</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- I3 -->
+  <section class="block" style="background: var(--blue-lighter);">
+    <div class="wrap">
+      <span class="eyebrow">Famílies d'I3</span>
+      <h2>Adaptació i seguiment</h2>
+
+      <div class="info-icon-grid">
+        <div class="info-icon-card">
+          <h3>Període d'adaptació</h3>
+          <p>Durant el període d'adaptació <strong>no hi ha servei de menjador per a I3</strong> (primera setmana).</p>
+        </div>
+        <div class="info-icon-card">
+          <h3>Fitxa diària</h3>
+          <p>Les famílies d'<strong>I3 (i durant el primer trimestre d'I4)</strong> rebeu diàriament una petita fitxa per saber com ha menjat el vostre fill o filla. La trobareu a la motxilla de l'escola.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PÍCNIC + DIETES -->
+  <section class="block">
+    <div class="wrap">
+      <span class="eyebrow">Altres serveis</span>
+      <h2>Pícnic i dietes especials</h2>
+
+      <div class="info-icon-grid">
+        <div class="info-icon-card">
+          <h3>Servei de pícnic</h3>
+          <p>S'ofereix per a les <strong>excursions programades per l'escola</strong>. Consisteix en una carmanyola amb el menú per als infants que ho hagin demanat al full d'inscripció o amb antelació, lliurada just abans de marxar d'excursió.</p>
+        </div>
+
+        <div class="info-icon-card">
+          <h3>Dietes i al·lèrgies</h3>
+          <p>Consulteu directament amb el coordinador per a temes de dietes, al·lèrgies o medicaments.</p>
+          <p style="font-size:0.9rem; color:var(--ink-soft);"><strong>Dieta astringent:</strong> en cas de necessitar-la, se servirà durant <strong>3 dies seguits</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- COMISSIÓ OBERTA -->
+  <section class="block">
+    <div class="wrap two-col even">
+      <div class="prose">
+        <span class="eyebrow">Comissió de menjador</span>
+        <h2>Una comissió oberta</h2>
+        <p>Els integrants de la Comissió de Menjador som <strong>famílies d'infants de l'escola</strong> que, de forma voluntària, treballem perquè el servei sigui el millor possible.</p>
+        <p>És una <strong>comissió oberta</strong>: podeu formar-ne part o aportar dubtes i propostes de millora sempre que vulgueu. Sereu benvinguts!</p>
+      </div>
+      <div>
+        <div class="info-block">
+          <h3>Contacte directe</h3>
+          <p style="margin-top:10px;"><strong>Comissió de menjador</strong><br><a href="mailto:menjador.ampaladraga@gmail.com">menjador.ampaladraga@gmail.com</a></p>
+          <p style="margin-top:14px;"><strong>Inscripcions</strong><br><a href="mailto:inscripcions.ladraga@gmail.com">inscripcions.ladraga@gmail.com</a></p>
+          <p style="margin-top:14px;"><strong>Coordinador (Ignasi)</strong><br>9:00 – 10:00 h al menjador · <a href="tel:+34689641667">689 641 667</a></p>
+          <p style="margin-top:18px;"><a class="btn btn-primary" href="mailto:menjador.ampaladraga@gmail.com">Contactar amb la comissió</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+</main>
+
+<footer class="site-footer" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="color:#fff;">
+          <img src="assets/logo-afa.jpg" alt="" width="100" height="69" style="background:#fff; padding:6px; border-radius:8px;">
+          <span class="brand-text"><strong style="color:#fff;">AFA</strong><span style="color:#9eb3cc;">Escola La Draga · Banyoles</span></span>
+        </a>
+        <p style="margin-top:18px; color:#9eb3cc; max-width: 36ch;">Associació de Famílies d'Alumnes. Fem comunitat al voltant de l'escola.</p>
+      </div>
+      <div>
+        <h4>Enllaços</h4>
+        <ul>
+          <li><a href="afa.html">L'AFA</a></li>
+          <li><a href="comissions.html">Comissions</a></li>
+          <li><a href="extraescolars.html">Extraescolars</a></li>
+          <li><a href="menjador.html">Menjador</a></li>
+          <li><a href="contacte.html">Contacte</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacte</h4>
+        <ul>
+          <li><a href="mailto:ampa@ceipladraga.cat">ampa@ceipladraga.cat</a></li>
+          <li><a href="https://chat.whatsapp.com/JeJYB9HPouA163zASYSJlp" rel="external noopener" target="_blank">Comunitat WhatsApp ↗</a></li>
+          <li><a href="https://agora.xtec.cat/ceipladraga/" rel="external noopener" target="_blank">Web de l'escola ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© AFA Escola La Draga · Banyoles</span>
+      <span>Web feta amb estima per les famílies</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
