@@ -14,8 +14,8 @@
   --blue-light: #e6efF8;
   --blue-lighter: #f4f8fc;
 
-  --accent: oklch(0.82 0.13 85);          /* groc mantega càlid */
-  --accent-soft: oklch(0.93 0.06 85);
+  --accent: #f5c842;                       /* groc mantega càlid — fallback */
+  --accent-soft: #fdf5d6;
 
   --bg: #fbf9f4;                           /* crema molt clar */
   --surface: #ffffff;
@@ -38,6 +38,13 @@
   --card-bg: var(--surface);
   --card-border: 1px solid transparent;
   --card-shadow: 0 1px 2px rgba(20, 32, 44, 0.04), 0 8px 24px rgba(20, 32, 44, 0.06);
+}
+
+@supports (color: oklch(0.82 0.13 85)) {
+  :root {
+    --accent: oklch(0.82 0.13 85);
+    --accent-soft: oklch(0.93 0.06 85);
+  }
 }
 
 /* Card style variants applied via [data-cards] on body */
@@ -197,16 +204,71 @@ section.block + section.block {
   color: #fff;
 }
 
+/* Hamburger toggle — hidden on desktop */
+.nav-toggle-input { display: none; }
+.nav-toggle-label  { display: none; }
+
 @media (max-width: 880px) {
   .site-header .wrap {
-    flex-direction: column; align-items: flex-start;
-    gap: 12px;
-    padding-top: 12px; padding-bottom: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding-top: 12px; padding-bottom: 12px;
   }
+  .brand { flex: 1; }
   .brand img { height: 44px; }
-  .main-nav { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .main-nav ul { gap: 2px; flex-wrap: nowrap; padding-bottom: 4px; }
-  .main-nav a { padding: 8px 12px; font-size: 0.9rem; white-space: nowrap; }
+
+  /* Hamburger button */
+  .nav-toggle-label {
+    display: flex; flex-direction: column; justify-content: center; gap: 5px;
+    cursor: pointer;
+    padding: 10px 8px;
+    border-radius: 8px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-toggle-label span {
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .nav-toggle-label:hover { background: var(--blue-lighter); }
+
+  /* Nav panel — hidden by default on mobile */
+  .main-nav {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    order: 3; /* always below brand row */
+  }
+  .nav-toggle-input:checked ~ .main-nav {
+    max-height: 600px;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 0 12px;
+  }
+  .main-nav a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+  }
+
+  /* Hamburger → X when open */
+  .nav-toggle-input:checked + .nav-toggle-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-toggle-input:checked + .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle-input:checked + .nav-toggle-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 }
 @media (max-width: 480px) {
   .brand img { height: 38px; }
