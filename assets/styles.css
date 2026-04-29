@@ -575,6 +575,16 @@ form.contact-form textarea { min-height: 140px; resize: vertical; }
   font-size: 0.9rem;
 }
 
+/* ---------- Background utilities ---------- */
+.bg-subtle  { background: var(--blue-lighter); }
+.bg-accent  { background: var(--accent-soft); }
+
+/* ---------- Accessibilitat ---------- */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--blue-darker);
@@ -609,6 +619,13 @@ form.contact-form textarea { min-height: 140px; resize: vertical; }
 @media (max-width: 720px) {
   .site-footer .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
+
+/* Footer brand overrides — evita inline styles als HTML */
+.site-footer .brand { color: #fff; }
+.site-footer .brand img { background: #fff; padding: 6px; border-radius: 8px; }
+.site-footer .brand-text strong { color: #fff; }
+.site-footer .brand-text span { color: #9eb3cc; }
+.footer-tagline { margin-top: 18px; color: #9eb3cc; max-width: 36ch; }
 
 /* ---------- Highlight strip ---------- */
 .strip {
@@ -907,6 +924,11 @@ form.contact-form textarea { min-height: 140px; resize: vertical; }
   background: var(--blue-lighter);
   font-style: italic;
   color: var(--blue-darker);
+}
+.timetable td.acollida .acollida-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ---------- Extraescolars: cards d'activitat ---------- */
